@@ -2,6 +2,6 @@
 
 module Jaeger
   module Client
-    VERSION = '0.10.0'.freeze
+    VERSION = '0.10.7'.freeze
   end
 end
