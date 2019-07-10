@@ -94,7 +94,7 @@ module Jaeger
 
     class B3CodecCommon
       def self.extract(carrier, keys)
-        trace_id = TraceId.base16_hex_id_to_uint64(carrier[keys::TRACE_ID])
+        trace_id = TraceId.base16_hex_id_to_uint128(carrier[keys::TRACE_ID])
         span_id = TraceId.base16_hex_id_to_uint64(carrier[keys::SPAN_ID])
         parent_id = TraceId.base16_hex_id_to_uint64(carrier[keys::PARENT_SPAN_ID])
         flags = parse_flags(carrier[keys::FLAGS], carrier[keys::SAMPLED])
